@@ -1,6 +1,6 @@
 language: node_js
 cache: 
-  direcotories:
+  directories:
     - ~/.npm
 node_js:
   - '12'
@@ -11,11 +11,11 @@ script:
 deploy:
   provider: pages
   edge: true
-  skip-cleanup: true
-  keep-history: true
-  github-token: $GITHUB_TOKEN
-  local-dir: dist/
-  target-branch: gh-pages
+  cleanup: true
+  keep_history: true
+  token: $GITHUB_TOKEN
+  local_dir: dist/
+  target_branch: gh-pages
   commit_message: "Deploy Release"
   on:
     branch: master
